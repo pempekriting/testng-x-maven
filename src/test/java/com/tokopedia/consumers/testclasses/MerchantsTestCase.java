@@ -17,7 +17,7 @@ public class MerchantsTestCase extends ParentTest {
 
 		homePageFactory.clickButtonSearch();
 
-		wait.until(ExpectedConditions.visibilityOf(searchPageFactory.getBtnSRPShopTab()));
+		wait.until(ExpectedConditions.elementToBeClickable(searchPageFactory.getBtnSRPShopTab()));
 
 		searchPageFactory.clickShopTab();
 

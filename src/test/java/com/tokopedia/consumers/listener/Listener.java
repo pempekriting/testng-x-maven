@@ -54,7 +54,6 @@ public class Listener implements IInvokedMethodListener, ITestListener, ISuiteLi
 			String imgPathRaw = Helper.takeScreenshot(ParentTest.getDriver(), result.getMethod().getMethodName());
 			test.get().fail(result.getThrowable(), MediaEntityBuilder.createScreenCaptureFromPath(imgPathRaw).build());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
