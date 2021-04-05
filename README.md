@@ -41,14 +41,17 @@ What things you need to install:
 	
 	1. Install the Selenoid first on your Docker
 	2. Open the project using any IDE (Eclipse, IDEA, etc)
-	3. Each machine that has Selenoid installed has a different port, you can change it in the `regression.xml` file
-	4. Running the project using command `mvn test`
+    3. Download sources Maven and update the project
+	4. Each machine that has Selenoid installed has a different port, you can change it in the `regression.xml` file
+	5. Running the project using command `mvn test`
 	
 * ### Running on Selenium Grid
     
     1. Install the Docker Compose first on your machine
     2. Enter to the project using your terminal and run the command `docker-compose -f docker-compose.yml up`
     3. Wait until the Selenium Grid finished installing
-	4. Each machine that has Selenium Grid installed has a different port, you can change it in the `regression.xml` file
-	5. Running the project using command `mvn test`
+    4. Open the project using any IDE (Eclipse, IDEA, etc)
+    5. Download sources Maven and update the project
+	6. Each machine that has Selenium Grid installed has a different port, you can change it in the `regression.xml` file
+	7. Running the project using command `mvn test`
 
