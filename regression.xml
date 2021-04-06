@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Regression Testing">
+<suite name="Regression Testing" pararell="classes" thread-count="2">
 	<listeners>
 		<listener class-name="com.tokopedia.consumers.listener.Listener" />
 	</listeners>
@@ -8,6 +8,24 @@
 		<parameter name="platform" value="Linux" />
 		<parameter name="browser" value="chrome" />
 		<parameter name="version" value="88.0" />
+		<parameter name="node" value="http://localhost:4444/wd/hub"/>
+		<parameter name="url" value="https://www.tokopedia.com/"></parameter>
+		<groups>
+			<run>
+				<include name="item"></include>
+				<include name="merchant"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.tokopedia.consumers.testclasses.ItemsTestCase"></class>
+			<class name="com.tokopedia.consumers.testclasses.MerchantsTestCase"></class>
+		</classes>
+	</test>
+	
+	<test name="Tokopedia Web Apps Firefox">
+		<parameter name="platform" value="Linux" />
+		<parameter name="browser" value="firefox" />
+		<parameter name="version" value="86.0" />
 		<parameter name="node" value="http://localhost:4444/wd/hub"/>
 		<parameter name="url" value="https://www.tokopedia.com/"></parameter>
 		<groups>

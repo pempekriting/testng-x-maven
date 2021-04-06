@@ -35,6 +35,7 @@ What things you need to install:
 - [Docker Compose](https://docs.docker.com/compose/install/)
 - [Selenoid](https://aerokube.com/selenoid/latest/)
 - [Selenium Grid](https://github.com/SeleniumHQ/docker-selenium/tree/selenium-3)
+- [Jenkins](https://www.jenkins.io/download/)
 
 ## How to Run the Project
 * ### Running on Selenoid
@@ -55,3 +56,14 @@ What things you need to install:
 	6. Each machine that has Selenium Grid installed has a different port, you can change it in the `regression.xml` file
 	7. Running the project using command `mvn test`
 
+* ### Running on Jenkins
+	1. Install the Jenkins first on your machine
+	2. Make sure Selenoid or Selenium Gird on Docker is running
+	3. Don't forget to setup your JDK and Maven inside your Jenkins
+	4. Create Freestyle project on Jenkins
+	5. Go to tab build and choose `Invoke top-level Maven targets`
+	6. At the Goals field enter the value `test -PRegression`
+	7. Click on the button Advanced
+	8. At the POM field, enter the path of `pom-jenkins.xml`
+	9. Click button save
+	10. Click on the Build Now button
