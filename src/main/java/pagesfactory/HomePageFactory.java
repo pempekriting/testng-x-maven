@@ -1,4 +1,4 @@
-package com.tokopedia.consumers.pagesfactory;
+package pagesfactory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

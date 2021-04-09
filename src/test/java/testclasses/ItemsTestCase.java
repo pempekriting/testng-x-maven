@@ -1,10 +1,10 @@
-package com.tokopedia.consumers.testclasses;
+package testclasses;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.tokopedia.consumers.parent.ParentTest;
+import base.ParentTest;
 
 public class ItemsTestCase extends ParentTest {
 

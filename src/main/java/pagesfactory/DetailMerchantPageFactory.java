@@ -1,4 +1,4 @@
-package com.tokopedia.consumers.pagesfactory;
+package pagesfactory;
 
 import java.io.IOException;
 
@@ -11,9 +11,9 @@ import org.openqa.selenium.support.PageFactory;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import com.tokopedia.consumers.utils.Helper;
 
 import lombok.Getter;
+import utils.Helper;
 
 @Getter
 public class DetailMerchantPageFactory {

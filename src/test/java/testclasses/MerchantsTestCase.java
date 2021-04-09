@@ -1,4 +1,4 @@
-package com.tokopedia.consumers.testclasses;
+package testclasses;
 
 import java.io.IOException;
 
@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.tokopedia.consumers.parent.ParentTest;
+import base.ParentTest;
 
 public class MerchantsTestCase extends ParentTest {
 	@Test(description = "Search merchant", priority = 0, groups = { "merchant" }, testName = "Search Merchant")

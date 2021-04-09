@@ -1,4 +1,4 @@
-package com.tokopedia.consumers.utils;
+package utils;
 
 import java.io.File;
 

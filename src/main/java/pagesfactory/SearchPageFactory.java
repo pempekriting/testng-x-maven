@@ -1,4 +1,4 @@
-package com.tokopedia.consumers.pagesfactory;
+package pagesfactory;
 
 import java.util.List;
 import java.util.Random;

@@ -1,4 +1,4 @@
-package com.tokopedia.consumers.parent;
+package base;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -7,7 +7,6 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -17,13 +16,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 
-import com.tokopedia.consumers.listener.Listener;
-import com.tokopedia.consumers.pagesfactory.DetailMerchantPageFactory;
-import com.tokopedia.consumers.pagesfactory.DetailProductPageFactory;
-import com.tokopedia.consumers.pagesfactory.HomePageFactory;
-import com.tokopedia.consumers.pagesfactory.SearchPageFactory;
-
+import listener.Listener;
 import lombok.Getter;
+import pagesfactory.DetailMerchantPageFactory;
+import pagesfactory.DetailProductPageFactory;
+import pagesfactory.HomePageFactory;
+import pagesfactory.SearchPageFactory;
 
 public class ParentTest extends Listener {
 

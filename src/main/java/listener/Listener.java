@@ -1,4 +1,4 @@
-package com.tokopedia.consumers.listener;
+package listener;
 
 import java.io.IOException;
 
@@ -12,9 +12,10 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
-import com.tokopedia.consumers.parent.ParentTest;
-import com.tokopedia.consumers.utils.ExtentManager;
-import com.tokopedia.consumers.utils.Helper;
+
+import base.ParentTest;
+import utils.ExtentManager;
+import utils.Helper;
 
 public class Listener implements IInvokedMethodListener, ITestListener, ISuiteListener {
 

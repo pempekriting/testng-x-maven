@@ -2,7 +2,7 @@
 
 <suite name="Regression Testing" pararell="classes" thread-count="2">
 	<listeners>
-		<listener class-name="com.tokopedia.consumers.listener.Listener" />
+		<listener class-name="listener.Listener" />
 	</listeners>
 	<test name="Tokopedia Web Apps">
 		<parameter name="platform" value="Linux" />
@@ -17,8 +17,8 @@
 			</run>
 		</groups>
 		<classes>
-			<class name="com.tokopedia.consumers.testclasses.ItemsTestCase"></class>
-			<class name="com.tokopedia.consumers.testclasses.MerchantsTestCase"></class>
+			<class name="testclasses.ItemsTestCase"></class>
+			<class name="testclasses.MerchantsTestCase"></class>
 		</classes>
 	</test>
 	
@@ -35,8 +35,8 @@
 			</run>
 		</groups>
 		<classes>
-			<class name="com.tokopedia.consumers.testclasses.ItemsTestCase"></class>
-			<class name="com.tokopedia.consumers.testclasses.MerchantsTestCase"></class>
+			<class name="testclasses.ItemsTestCase"></class>
+			<class name="testclasses.MerchantsTestCase"></class>
 		</classes>
 	</test>
 </suite>
