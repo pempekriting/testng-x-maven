@@ -13,7 +13,6 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 
-import base.ParentTest;
 import utils.ExtentManager;
 import utils.Helper;
 
@@ -44,15 +43,20 @@ public class Listener implements IInvokedMethodListener, ITestListener, ISuiteLi
 
 	@Override
 	public synchronized void onTestSuccess(ITestResult result) {
-		System.out.println((result.getMethod().getMethodName() + " passed!"));
-		test.get().pass("Test passed");
+		try {
+			String imgPathRaw = Helper.takeScreenshot(result.getMethod().getMethodName());
+			System.out.println((result.getMethod().getMethodName() + " passed!"));
+			test.get().pass("Test passed", MediaEntityBuilder.createScreenCaptureFromPath(imgPathRaw).build());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
 	}
 
 	@Override
 	public synchronized void onTestFailure(ITestResult result) {
-
 		try {
-			String imgPathRaw = Helper.takeScreenshot(ParentTest.getDriver(), result.getMethod().getMethodName());
+			String imgPathRaw = Helper.takeScreenshot(result.getMethod().getMethodName());
 			test.get().fail(result.getThrowable(), MediaEntityBuilder.createScreenCaptureFromPath(imgPathRaw).build());
 		} catch (IOException e) {
 			e.printStackTrace();

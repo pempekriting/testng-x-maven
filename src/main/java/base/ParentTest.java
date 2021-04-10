@@ -17,15 +17,14 @@ import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 
 import listener.Listener;
-import lombok.Getter;
 import pagesfactory.DetailMerchantPageFactory;
 import pagesfactory.DetailProductPageFactory;
 import pagesfactory.HomePageFactory;
 import pagesfactory.SearchPageFactory;
+import utils.Helper;
 
 public class ParentTest extends Listener {
 
-	@Getter
 	protected static WebDriver driver;
 	protected WebDriverWait wait;
 	protected Actions action;
@@ -36,7 +35,7 @@ public class ParentTest extends Listener {
 	protected SearchPageFactory searchPageFactory;
 	protected DetailProductPageFactory detailProductPageFactory;
 	protected DetailMerchantPageFactory detailMerchantPageFactory;
-	Listener listener;
+	protected Helper helper;
 
 	public static final int SHORT_WAIT = 5;
 	public static final int MEDIUM_WAIT = 15;
@@ -50,6 +49,7 @@ public class ParentTest extends Listener {
 		searchPageFactory = new SearchPageFactory(driver, test, wait, action);
 		detailProductPageFactory = new DetailProductPageFactory(driver, test);
 		detailMerchantPageFactory = new DetailMerchantPageFactory(driver, test);
+		helper = new Helper(driver);
 	}
 
 	@AfterClass(alwaysRun = true)

@@ -37,7 +37,7 @@ public class DetailMerchantPageFactory {
 
 	public String getMerchantName() throws IOException {
 		String merchantName = pdpFlexWrapperContainer.findElement(By.xpath("//h1")).getText();
-		String imgPathRaw = Helper.takeScreenshot(driver, "getMerchantName");
+		String imgPathRaw = Helper.takeScreenshot("getMerchantName");
 		test.get().log(Status.PASS, "Getting merchant name: " + merchantName, MediaEntityBuilder.createScreenCaptureFromPath(imgPathRaw).build());
 		return merchantName;
 		
