@@ -27,13 +27,10 @@ public class Helper {
 			} else {
 				System.out.println("Failed to create directory: " + directory);
 			}
-		} else {
-			System.out.println("Directory already exists: " + directory);
 		}
 	
 		File sourceFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(sourceFile, new File(directory + fileName));
-		String destination = directory + fileName;
-		return destination;
+		return directory + fileName;
 	}
 }

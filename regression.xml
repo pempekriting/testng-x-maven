@@ -7,7 +7,7 @@
 	<test name="Tokopedia Web Apps">
 		<parameter name="platform" value="Linux" />
 		<parameter name="browser" value="chrome" />
-		<parameter name="version" value="88.0" />
+		<parameter name="version" value="92.0" />
 		<parameter name="node" value="http://localhost:4444/wd/hub"/>
 		<parameter name="url" value="https://www.tokopedia.com/"></parameter>
 		<groups>
@@ -25,7 +25,7 @@
 	<test name="Tokopedia Web Apps Firefox">
 		<parameter name="platform" value="Linux" />
 		<parameter name="browser" value="firefox" />
-		<parameter name="version" value="86.0" />
+		<parameter name="version" value="90.0" />
 		<parameter name="node" value="http://localhost:4444/wd/hub"/>
 		<parameter name="url" value="https://www.tokopedia.com/"></parameter>
 		<groups>

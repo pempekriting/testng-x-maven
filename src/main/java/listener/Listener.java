@@ -20,7 +20,6 @@ public class Listener implements IInvokedMethodListener, ITestListener, ISuiteLi
 
 	public static ExtentReports extent = ExtentManager.createInstance();
 	public static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
-	ExtentTest extentTest;
 
 	@Override
 	public synchronized void onStart(ISuite suite) {

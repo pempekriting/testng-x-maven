@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 import base.ParentTest;
 
 public class ItemsTestCase extends ParentTest {
-
 	@Test(description = "Search item and pick random item", priority = 0, groups = { "item" }, testName = "Search item")
 	public void searchItemTabProduct() {
 		
@@ -16,10 +15,10 @@ public class ItemsTestCase extends ParentTest {
 		homePageFactory.clickButtonSearch();
 
 		wait.until(ExpectedConditions.visibilityOf(searchPageFactory.getDivSRPContentProducts()));
-		
-		Assert.assertEquals(searchPageFactory.getTopadsCPMWrapper().isDisplayed(), true);
 
-		Assert.assertEquals(searchPageFactory.getDivSRPContentProducts().isDisplayed(), true);
+		Assert.assertTrue(searchPageFactory.getTopadsCPMWrapper().isDisplayed());
+
+		Assert.assertTrue(searchPageFactory.getDivSRPContentProducts().isDisplayed());
 	}
 
 	@Test(priority = 2, groups = {"item"}, testName = "Search item by power merchant")
@@ -71,6 +70,6 @@ public class ItemsTestCase extends ParentTest {
 
 		detailProductPageFactory.clickBtnSkipOnBoarding2();
 
-		Assert.assertEquals(detailProductPageFactory.getLblPDPDetailProductName().isDisplayed(), true);
+		Assert.assertTrue(detailProductPageFactory.getLblPDPDetailProductName().isDisplayed());
 	}
 }
