@@ -41,13 +41,13 @@ What things you need to install:
 * ### Running on Selenoid
 
 	1. Install the Docker Compose and Docker first on your machine
-	2. Pull latest images Selenoid Chrome and Selenoid Firefox using `docker pull selenoid/chrome:latest` and `docker pull selenoid/firefox:latest`   
-	2. Enter to the project using your terminal and run the command `docker-compose -f docker-compose-selenoid.yml up -d`
-	3. Wait until the Selenoid finished installing
-	3. Open the project using any IDE (Eclipse, IDEA, etc)
-    4. Download sources Maven and update the project
-	5. Each machine that has Selenoid installed has a different port, you can change it in the `regression.xml` file
-	6. Running the project using command `mvn test`
+	2. Pull the latest images Selenoid Chrome and Selenoid Firefox using `docker pull selenoid/chrome:latest` and `docker pull selenoid/firefox:latest`   
+	3. Enter to the project using your terminal and run the command `docker-compose -f docker-compose-selenoid.yml up -d`
+	4. Wait until the Selenoid finished installing
+	5. Open the project using any IDE (Eclipse, IDEA, etc)
+    6. Download sources Maven and update the project
+	7. Each machine that has Selenoid installed has a different port, you can change it in the `regression.xml` file
+	8. Running the project using command `mvn test`
 	
 * ### Running on Selenium Grid
     
